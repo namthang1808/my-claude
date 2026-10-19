@@ -1,6 +1,0 @@
-{"ts":"2026-05-16T06:33:24.700Z","hook":"session-init","event":"SessionStart","tool":"","target":"","note":"startup","dur":213,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-16T06:33:25.116Z","hook":"usage-quota-cache-refresh","event":"SessionStart","tool":"","target":"","note":"fetched","dur":664,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-16T08:59:19.981Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":90,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-16T08:59:20.523Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"fetched","dur":634,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-30T08:54:29.764Z","hook":"session-init","event":"SessionStart","tool":"","target":"","note":"startup","dur":125,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-30T08:54:29.841Z","hook":"usage-quota-cache-refresh","event":"SessionStart","tool":"","target":"","note":"fetch-failed","dur":209,"status":"warn","exit":0,"error":""}

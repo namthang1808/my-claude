@@ -1,0 +1,163 @@
+{
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "node \".cursor/hooks/secret-output-guardrail.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/simplify-gate.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/secret-output-guardrail.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/dev-rules-reminder.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/simplify-gate.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/usage-quota-cache-refresh.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "node \".cursor/hooks/dev-rules-reminder.cjs\"",
+        "matcher": "Write",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/plan-format-kanban.cjs\"",
+        "matcher": "Write",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-state.cjs\"",
+        "matcher": "Task",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/usage-quota-cache-refresh.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/agent-behavior-linter.cjs\"",
+        "type": "command"
+      }
+    ],
+    "preCompact": [
+      {
+        "command": "node \".cursor/hooks/precompact-capture.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/agent-behavior-linter.cjs\"",
+        "type": "command"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node \".cursor/hooks/descriptive-name.cjs\"",
+        "matcher": "Write",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/privacy-block.cjs\"",
+        "matcher": "Read|Write|Shell",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/scout-block.cjs\"",
+        "matcher": "Shell|Read",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/secrets-inject.cjs\"",
+        "matcher": "Shell",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/context-firewall.cjs\"",
+        "matcher": "Shell|Read|Grep",
+        "type": "command"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      }
+    ],
+    "sessionStart": [
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-init.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      }
+    ],
+    "stop": [
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/cook-after-plan-reminder.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-state.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/usage-quota-cache-refresh.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/agent-behavior-linter.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/session-heartbeat.cjs\"",
+        "type": "command"
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": "node \".cursor/hooks/subagent-init.cjs\"",
+        "type": "command"
+      },
+      {
+        "command": "node \".cursor/hooks/team-context-inject.cjs\"",
+        "type": "command"
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": "node \".cursor/hooks/session-state.cjs\"",
+        "type": "command"
+      }
+    ]
+  },
+  "version": 1
+}
